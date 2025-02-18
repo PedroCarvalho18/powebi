@@ -1,0 +1,13 @@
+trigger:
+  - dev  
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+  - script: |
+      git remote add github https://github.com/PedroCarvalho18/powebi
+      git fetch github
+      git merge github/main
+      git push origin main
+    displayName: 'Sincronizando Azure DevOps com GitHub'
