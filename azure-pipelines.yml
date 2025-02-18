@@ -6,8 +6,9 @@ pool:
 
 steps:
   - script: |
-      git remote add github https://github.com/PedroCarvalho18/powebi
+      git remote set-url github https://github.com/PedroCarvalho18/powebi.git
       git fetch github
+      git checkout main
       git merge github/main
       git push origin main
     displayName: 'Sincronizando Azure DevOps com GitHub'
